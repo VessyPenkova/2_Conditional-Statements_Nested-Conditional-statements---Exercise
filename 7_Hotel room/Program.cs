@@ -58,8 +58,8 @@ namespace _7_Hotel_room
                 }
             }
 
-            Console.Write($"Apartment: {appartmentAmount:f2} lv.");
-            Console.Write($" Studio: {studioAmount:f2} lv.");
+            Console.WriteLine($"Apartment: {appartmentAmount:f2} lv.");
+            Console.WriteLine($" Studio: {studioAmount:f2} lv.");
 
         }
     }
