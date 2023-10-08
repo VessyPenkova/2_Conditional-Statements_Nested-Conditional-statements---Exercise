@@ -19,24 +19,24 @@ namespace _09_Ski_Holiday
             int nightToPay = daysToStay - 1;
 
             if (typeofroom == "room for one person")
-            {                
-                baseAmount = (daysToStay - 1) * priceForOnePErsonRoom;
+            {
+                baseAmount = (nightToPay) * priceForOnePErsonRoom;
                 discount = 0;
-                priceBeforeAssestment = baseAmount - baseAmount / 100 * discount;
+                priceBeforeAssestment = baseAmount - baseAmount / 100* discount;
 
             }
             else if (typeofroom == "apartment")
             {
                 baseAmount = (nightToPay) * priceForAppartment;
-                if (nightToPay < 10 )
+                if (nightToPay < 9)
                 {
                     discount = 30;
                 }
-                else if (nightToPay >= 10  && nightToPay <= 15 )
+                else if (nightToPay >= 9 && nightToPay <= 14)
                 {
                     discount = 35;
                 }
-                else if (nightToPay > 15 )
+                else if (nightToPay > 14)
                 {
                     discount = 50;
                 }
@@ -45,16 +45,16 @@ namespace _09_Ski_Holiday
             }
             else if (typeofroom == "president apartment")
             {
-                baseAmount = (nightToPay ) * priceForPresidentAppartment;
-                if (nightToPay < 10 )
+                baseAmount = (nightToPay) * priceForPresidentAppartment;
+                if (nightToPay < 9)
                 {
                     discount = 10;
                 }
-                else if (nightToPay >= 10  && nightToPay <= 15 )
+                else if (nightToPay >= 9 && nightToPay <= 14)
                 {
                     discount = 15;
                 }
-                else if (nightToPay > 15 )
+                else if (nightToPay > 14)
                 {
                     discount = 20;
                 }
@@ -63,7 +63,9 @@ namespace _09_Ski_Holiday
 
             if (assessment == "positive")
             {
+
                 finalPrice = priceBeforeAssestment + priceBeforeAssestment / 100 * 25;
+
             }
             else if (assessment == "negative")
             {
